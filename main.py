@@ -11,6 +11,6 @@ def main():
     sorted_chars = get_sorted_chars(args[1])
     print(f"Found {word_count} total words")
     for item in sorted_chars:
-        print(f"{item["char"]}: {item["num"]}")
+        print(f"{item['char']}: {item['num']}")
 
 main()
