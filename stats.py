@@ -3,14 +3,14 @@ def get_book_text(filepath):
         file_contents = f.read()
     return file_contents
 
-def get_num_words():
-    book_text = get_book_text("books/frankenstein.txt")
+def get_num_words(filepath):
+    book_text = get_book_text(filepath)
     book_list = book_text.split()
     word_count = len(book_list)
     return word_count
 
-def get_char_count():
-    book_text = get_book_text("books/frankenstein.txt")
+def get_char_count(filepath):
+    book_text = get_book_text(filepath)
     char_dict = {}
     char_list = []
     for char in book_text:
@@ -26,7 +26,7 @@ def get_char_count():
 def sort_on(items):
     return items["num"]
 
-def get_sorted_chars():
-    char_list = get_char_count()
+def get_sorted_chars(filepath):
+    char_list = get_char_count(filepath)
     char_list.sort(reverse=True, key=sort_on)
     return char_list
